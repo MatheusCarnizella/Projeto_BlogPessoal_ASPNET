@@ -28,15 +28,16 @@ namespace BlogAPI.Src.Repositorios.Implentacoes
 
 
         #region Métodos
-               
-        public async Task NovoUsuarioAsync(Usuario usuario)
+
+         public async Task NovoUsuarioAsync(Usuario usuario)
         {
             await _contexto.Usuarios.AddAsync(new Usuario
             {
                 Nome = usuario.Nome,
                 Email = usuario.Email,
                 Senha = usuario.Senha,
-                Foto = usuario.Foto
+                Foto = usuario.Foto,
+                Tipo = usuario.Tipo
             });
             await _contexto.SaveChangesAsync();
         }
