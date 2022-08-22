@@ -8,6 +8,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BlogAPI.Src.Repositorios.Implentacoes
 {
+    /// <summary>
+    /// <para>Resumo: Classe responsavel por implementar IUsuario</para>
+    /// <para>Criado por: Generation</para>
+    /// <para>Versão: 1.0</para>
+    /// <para>Data: 12/05/2022</para>
+    /// </summary>
+
     public class UsuarioRepositorio : IUsuario
     {
         #region Atributos
@@ -26,10 +33,13 @@ namespace BlogAPI.Src.Repositorios.Implentacoes
 
         #endregion
 
-
         #region Métodos
 
-         public async Task NovoUsuarioAsync(Usuario usuario)
+        /// <summary>
+        /// <para>Resumo: Método assíncrono para salvar um novo usuario</para>
+        /// </summary>
+        /// <param name="usuario">Construtor para cadastrar usuario</param>
+        public async Task NovoUsuarioAsync(Usuario usuario)
         {
             await _contexto.Usuarios.AddAsync(new Usuario
             {
@@ -42,6 +52,11 @@ namespace BlogAPI.Src.Repositorios.Implentacoes
             await _contexto.SaveChangesAsync();
         }
 
+        /// <summary>
+        /// <para>Resumo: Método assíncrono para pegar um usuario pelo email</para>
+        /// </summary>
+        /// <param name = "email"> Email do usuario</param>
+        /// <return>UsuarioModelo</return>
         public async Task<Usuario> PegarUsuarioPeloEmailAsync(string email)
         {
             return await _contexto.Usuarios.FirstOrDefaultAsync(u => u.Email == email);

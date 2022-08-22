@@ -3,11 +3,6 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BlogAPI.Src.Contextos
 {
-    /// <summary>
-    /// <para>Resumo: Classe contexto, responsavel por carregar contexto e definir
-    /// <para>Versão: 1.0</para>
-    /// <para>Data: 17/07/2022</para>
-    /// </summary>
     public class BlogPessoalContexto : DbContext
     {
         #region Atributos

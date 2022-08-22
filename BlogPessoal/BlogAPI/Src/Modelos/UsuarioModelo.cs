@@ -6,6 +6,13 @@ using BlogAPI.Src.Utilidades;
 
 namespace BlogAPI.Src.Modelos
 {
+    /// <summary>
+    /// <para>Resumo: Classe responsavel por representar tb_usuarios no banco.</para>
+    /// <para>Criado por: Generation</para>
+    /// <para>Versão: 1.0</para>
+    /// <para>Data: 12/05/2022</para>
+    /// </summary>
+
     [Table("tb_usuarios")]
     public class Usuario
     {
